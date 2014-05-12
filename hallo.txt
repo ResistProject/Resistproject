@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 lolz
+=======
+hallo wereld
+
+Wim is homo
+>>>>>>> 45fd262dd53c0c2933cbda5ec9a8e80b7946aa5f
