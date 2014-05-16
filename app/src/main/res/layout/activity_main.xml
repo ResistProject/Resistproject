@@ -30,4 +30,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp" />
 
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Switch"
+        android:id="@+id/switch1"
+        android:layout_below="@+id/ratingBar"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_marginTop="57dp" />
+
 </RelativeLayout>
