@@ -1,9 +1,11 @@
-package example.myapplication.app;
+package example.myapplication.movelife;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import example.myapplication.app.R;
 
 
 public class MainActivity extends Activity {

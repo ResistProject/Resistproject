@@ -1,4 +1,4 @@
-package example.myapplication.app;
+package example.myapplication.movelife;
 
 import android.app.ListActivity;
 import android.content.Intent;
