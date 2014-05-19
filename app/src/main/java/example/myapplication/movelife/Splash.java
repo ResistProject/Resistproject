@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import example.myapplication.app.R;
+import example.myapplication.movelife.R;
 
 /**
  * Created by Thomas on 14-5-2014.

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import example.myapplication.app.R;
+import example.myapplication.movelife.R;
 
 
 public class MainActivity extends Activity {
