@@ -35,4 +35,12 @@ public class Menu extends ListActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
 }
