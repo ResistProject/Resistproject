@@ -1,8 +1,10 @@
-package example.myapplication.app;
+package example.myapplication.movelife;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import example.myapplication.movelife.R;
 
 /**
  * Created by Thomas on 14-5-2014.
@@ -24,7 +26,7 @@ public class Splash extends Activity {
             }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    Intent openStartingPoint = new Intent("example.myapplication.app.MENU");
+                    Intent openStartingPoint = new Intent("example.myapplication.movelife.MENU");
                     startActivity(openStartingPoint);
                 }
                 }

@@ -1,4 +1,4 @@
-package example.myapplication.app;
+package example.myapplication.movelife;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -26,7 +26,7 @@ public class Menu extends ListActivity {
         String cheese = classes[position];
         super.onListItemClick(l, v, position, id);
         try {
-            Class ourClass = Class.forName("example.myapplication.app." + cheese);
+            Class ourClass = Class.forName("example.myapplication.movelife." + cheese);
             Intent ourIntent = new Intent(Menu.this, ourClass);
 
             startActivity(ourIntent);
