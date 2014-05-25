@@ -16,15 +16,12 @@ import android.widget.SearchView;
  */
 public class Menu extends ListActivity {
 
-    String classes[] = {"MainActivity", "Example1", "example2", "example3", "example4"};
+    String classes[] = {"MainActivity", "AddCompany", "example2", "example3", "example4"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setListAdapter(new ArrayAdapter<String>(Menu.this, android.R.layout.simple_list_item_1, classes));
-
-
-
 
     }
 
