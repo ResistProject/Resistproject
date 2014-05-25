@@ -27,11 +27,11 @@ public class DatabaseTable {
     private Context ourContext;
     private SQLiteDatabase ourDatabase;
 
-
-
-
-
-
+    public DatabaseTable(DatabaseTable databaseTable) {
+        ourHelper = new DbHelper(ourContext);
+        ourDatabase = ourHelper.getWritableDatabase();
+        //return this;
+    }
 
     public long createEntry(String name) {
 
