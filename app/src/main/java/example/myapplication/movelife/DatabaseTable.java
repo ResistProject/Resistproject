@@ -30,11 +30,7 @@ public class DatabaseTable {
     private SQLiteDatabase ourDatabase;
 
 
-    public DatabaseTable(DatabaseTable databaseTable) {
-        ourHelper = new DbHelper(ourContext);
-        ourDatabase = ourHelper.getWritableDatabase();
-        //return this;
-    }
+
 
 
     public long createEntry(String name) {
@@ -63,40 +59,7 @@ public class DatabaseTable {
     }
 
 
-    public Cursor getWordMatches(String query, String[] columns) {
-        String selection = KEY_NAME + " MATCH ?";
-        String[] selectionArgs = new String[] {query+"*"};
 
-        return query(selection, selectionArgs, columns);
-    }
-
-    private Cursor query(String selection, String[] selectionArgs, String[] columns) {
-        SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
-        builder.setTables(DATABASE_TABLE);
-
-        Cursor cursor = builder.query(ourHelper.getReadableDatabase(),
-                columns, selection, selectionArgs, null, null, null);
-
-        if (cursor == null) {
-            return null;
-        } else if (!cursor.moveToFirst()) {
-            cursor.close();
-            return null;
-        }
-        return cursor;
-    }
-
-
-    DatabaseTable db  = new DatabaseTable(this);
-
-    private void handleIntent(Intent intent) {
-
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-            Cursor c = db.getWordMatches(query, null);
-            //process Cursor and display results
-        }
-    }
 
 
 
