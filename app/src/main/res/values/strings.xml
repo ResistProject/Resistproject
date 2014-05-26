@@ -4,12 +4,12 @@
     <string name="app_name">MoveLife</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
+
     <string name="search_label">Search</string>
     <string name="search_hint">Search Names</string>
     <string name="search_title">Search</string>
-=======
+
     <string name="search_title">Zoeken...</string>
     <string name="search_hint">Zoek naar ...</string>
->>>>>>> 0986e548c9948eec08167fff1f262b4466cd9f45
+
 </resources>
