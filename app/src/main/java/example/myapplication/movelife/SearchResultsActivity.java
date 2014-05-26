@@ -32,4 +32,8 @@ public class SearchResultsActivity extends Activity {
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0986e548c9948eec08167fff1f262b4466cd9f45

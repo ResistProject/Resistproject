@@ -20,13 +20,25 @@ public class DatabaseTable {
     public static final String KEY_NAME = "bedrijfs_naam";
 
     private static final String DATABASE_NAME = "MoveLifedb";
+<<<<<<< HEAD
     public static final String DATABASE_TABLE = "bedrijfTable";
+=======
+    private static final String DATABASE_TABLE = "bedrijfTable";
+>>>>>>> 0986e548c9948eec08167fff1f262b4466cd9f45
     private static final int DATABASE_VERSION = 1;
 
     private DbHelper ourHelper;
     private Context ourContext;
     private SQLiteDatabase ourDatabase;
 
+<<<<<<< HEAD
+=======
+    public DatabaseTable(DatabaseTable databaseTable) {
+        ourHelper = new DbHelper(ourContext);
+        ourDatabase = ourHelper.getWritableDatabase();
+        //return this;
+    }
+>>>>>>> 0986e548c9948eec08167fff1f262b4466cd9f45
 
     public long createEntry(String name) {
 
@@ -53,7 +65,44 @@ public class DatabaseTable {
         return result;
     }
 
+<<<<<<< HEAD
 
+=======
+    public Cursor getWordMatches(String query, String[] columns) {
+        String selection = KEY_NAME + " MATCH ?";
+        String[] selectionArgs = new String[] {query+"*"};
+
+        return query(selection, selectionArgs, columns);
+    }
+
+    private Cursor query(String selection, String[] selectionArgs, String[] columns) {
+        SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
+        builder.setTables(DATABASE_TABLE);
+
+        Cursor cursor = builder.query(ourHelper.getReadableDatabase(),
+                columns, selection, selectionArgs, null, null, null);
+
+        if (cursor == null) {
+            return null;
+        } else if (!cursor.moveToFirst()) {
+            cursor.close();
+            return null;
+        }
+        return cursor;
+    }
+
+
+    DatabaseTable db  = new DatabaseTable(this);
+
+    private void handleIntent(Intent intent) {
+
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            Cursor c = db.getWordMatches(query, null);
+            //process Cursor and display results
+        }
+    }
+>>>>>>> 0986e548c9948eec08167fff1f262b4466cd9f45
 
 
     private static class DbHelper extends SQLiteOpenHelper{

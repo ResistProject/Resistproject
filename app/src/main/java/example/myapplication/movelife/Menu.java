@@ -22,8 +22,15 @@ public class Menu extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setListAdapter(new ArrayAdapter<String>(Menu.this, android.R.layout.simple_list_item_1, classes));
+<<<<<<< HEAD
+=======
 
     }
+>>>>>>> 0986e548c9948eec08167fff1f262b4466cd9f45
+
+    }
+
+
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
